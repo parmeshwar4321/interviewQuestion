@@ -1,5 +1,5 @@
-************************************************************************************************************//
-**How Javascript works!
+**How Javascript works!**
+
 
 1. Everything in Javascript happens inside an Execution Context. when a code runs execution context is created
     assume that it is like big box or container by whole javascript code will be executed!!
@@ -26,7 +26,7 @@ CALLSTACK IS KNOW BY THIS NAMES AS WELL
 4.MACHINE STACK
 ---
 
-**HOISTING IN JS
+**HOISTING IN JS**
       Hoisting is phenomenon in which you can access the variable and function even before declare/initialize it.
 
 var a=7
@@ -52,7 +52,7 @@ a value that represents no value.
 a value that has been explicitly defined to a variable.
 For example, we get a value of null when the fs.readFile method does not throw an error.
 ---
-**Scopes** in js
+**Scopes in js**
 scope mean where you can access a variable and function
 ..scope is depend on lexical environment
 lexical means in order/herarcy
@@ -116,15 +116,18 @@ It’s an Immediately-Invoked Function Expression, or IIFE for short. It execute
  This pattern is often used when trying to avoid polluting the global namespace, because all the variables used inside the IIFE (like in any other normal function) are not visible outside its scope.
 
 ---
-NPM
+**NPM**
 
 npm stands for Node Package Manager. npm provides following two main functionalities:
 Online repositories for node.js packages/modules which are searchable on search.nodejs.org
 Command line utility to install packages, do version management and dependency management of Node.js packages.
 ---
+*CALLBACK*
 Callbacks are simply Functions In JavaScript which are to be called and then executed after the execution of another function has finished.
 The problem with callbacks is that when the application gets bigger, we have to do a lot of nesting which can lead to what is called callback hell . Error handling becomes difficult in this situation. Hence JavaScript gave us a solution called promises introduced in ES6
-function a(){
+
+
+` function a(){
 console.log("hello");
 }
 function b(cb){
@@ -132,14 +135,13 @@ function b(cb){
     console.log('navgururkul');
 
 }
-b(a)
-
+b(a)`
 Example no-1
 setTimeout(function() {  
     console.log('hello1');  
   }, 2000)
 console.log(numbers);
-
+`
 Example no-2
 console.log('start');
 function sam(cb){setTimeout(() => {
@@ -198,7 +200,7 @@ fetch(url)
      console.log(err);
 });
 ---
-//////////////////////////////////////////fetching api with Async await/////////////////////////////
+fetching api with Async await
 ** ASYNC AWAIT 
 const onfetch=async()=>{
      const res=await fetch(url)
@@ -207,7 +209,7 @@ const onfetch=async()=>{
 }
 onfetch()
 ---
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+**GENERATORS**
 genreators in js. specal function that can return multiple values and can be paused and resumed in the executions of middway
 function* oddNumberFinder(numbers) {
     for (const i of numbers) {
@@ -229,9 +231,11 @@ while (num = oddNumbers.next().value) {
     console.log('Number: ' + num);
 }
 ---
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 **create server using http module in node>js**
-const http = require('http')
+
+`
+    const http = require('http')
     const server = http.createServer((req, res) => {
         console.log(req.url);
         if (req.url == '/') {
@@ -248,10 +252,11 @@ const http = require('http')
     });
 
     server.listen(8000, '127.0.0.1', () => {
-        console.log('i am listening')})
+        console.log('i am listening')})`
+
 
 ---
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+---
 **What is NodeJS ?**
 Node.js is a web application framework built on Google Chrome's JavaScript Engine (V8 Engine).
 Node.js comes with runtime environment on which a Javascript based script can be interpreted and executed (It is analogus to JVM to JAVA byte code). This runtime allows to execute a JavaScript code on any machine outside a browser. Because of this runtime of Node.js, JavaScript is now can be executed on server as well.
@@ -276,8 +281,7 @@ FS
 Net
 Global Objects
 ---
-//////////////////////////////////////////////////////////////////////////////////////////////////
-**WHY NODE JS IN SINGLE THREADED ?
+**WHY NODE JS IN SINGLE THREADED ?**
 
 For async processing, Node.js was created explicitly as an experiment. It is believed that more performance and scalability can be achieved by doing async processing on a single thread under typical web loads than the typical thread-based implementation.
 
@@ -287,8 +291,8 @@ The two types of API functions in Node.js are
 a) Asynchronous, non-blocking functions
 b) Synchronous, blocking functions
 ---
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-What is EVENT-DRIVEN programming ?
+
+**What is EVENT-DRIVEN programming ?**
 
 In computer programming, event-driven programming is a programming paradigm in which the flow of the program is determined by events like messages from other programs or threads.
 
@@ -299,47 +303,48 @@ It is an application architecture technique divided into two sections
 1) Event Selection
  2) Event Handling
 ---
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-**REACT
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-AngularJS 
+**REACT**
+---
+
+**AngularJS**
 is a web application development framework. It’s a JavaScript and it is different from other web app frameworks written in JavaScript like jQuery. NodeJS is a runtime environment used for building server-side applications while AngularJS is a JavaScript framework mainly useful in building/developing client-side part of applications which run inside a web browser.
 
 
-///////////////////////////////////////ORM////////////////////////////////////////////////////////////////////
 (**************Databases*************************)
 two types sql and no-sql
 SQL
 SQL or Structured Query Language is pronounced as “S-Q-L” or sometimes as “see-quel” is a standard language to access and manipulate Relational Databases.
 Common and Popular Examples of Relational Databases which use SQL are —
 
-MySQL
+* MySQL
 
-Oracle
+* Oracle
 
-SQLite
+* SQLite
 
-Postgres
+* Postgres
 
-MS-SQL
+* MS-SQL
 
-No-SQL
+* No-SQL
 As the name suggests NoSQL is “not” SQL, in other words, it is a non-relational database and is unstructured. Due to its unstructured nature, it is sometimes called as UnQL
 
 Common and Popular Examples of NoSQL Databases are —
 
-Mongo DB
+* Mongo DB
 
-BigTable
+* BigTable
 
-Cassandra
+* Cassandra
 
-Hbase
+* Hbase
 
-Redis
+* Redis
+
+____
 As the name suggests NoSQL is “not” SQL, in other words, it is a non-relational database and is unstructured. Due to its unstructured nature, it is sometimes called as UnQL
 
 ORM stands for "Object to Relational Mapping" where
@@ -350,28 +355,26 @@ The Object part is the one you use with your programming language ( python in th
 The Relational part is a Relational Database Manager System ( A database that is ) there are other types of databases but the most popular is relational ( you know tables, columns, pk fk etc eg Oracle MySQL, MS-SQL )
 
 And finally the Mapping part is where you do a bridge between your objects and your tables.
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ---
 1) TO display top 20 in rows
 Query is
 SELECT   * FROM table_name LIMIT 0,20;
-//////////////////////////////////////    **default port is 3006
+  **default port of mysql is 3006**
 2) To show timestamp
 select NOW();
-//
+
 3) To show dateString
 select CURRENT_DATE();
 
 4) To count the number of the rows
 select COUNT user_id from table_name;
-////////////////////////////////////
+
 increasing order query
 select city,temperature form weather ORDER BY  temperature;
-//////////////////////////////////////
+
 ADD COLUMNS IN TABLES
 ALTER TABLE table_name ADD column_name;
-////////////////////////////////////////
-
+---
 ENUM
 ---
 AGREGATE FUNCTIONS IN MYSQL
@@ -381,16 +384,16 @@ AGREGATE FUNCTIONS IN MYSQL
 4. SUM
 5. AVG
 
-To get max value(sallery)
+* To get max value(sallery)
    select MAX(sallery) from Employee_table;
-To get min value(sallery)
+* To get min value(sallery)
    select MIN(sallery) from Employee_table;
-To get count of sallery;
+* To get count of sallery;
    select COUNT(sallery) from Employee_table;
    to get unique(not duplicate) count of sallery from employee table
       SELECT DISTINC(COUNT(sallery)) from Employee_table;
 
-To get Sum  of sallery;
+* To get Sum  of sallery;
    select SUM(sallery) from Employee_table;
    to get unique(not duplicate) SUM of sallery from employee table
       SELECT DISTINC(SUM(sallery)) from Employee_table;
@@ -398,7 +401,7 @@ To get Sum  of sallery;
 To get AVERAGE 
 avg=sum(sallery)/count(sallery)
 ---
-////////////////////////
+
 **  JOINS IN MYSQL */
 JOINS are used to retrieve data from multiple tables. A MySQL JOIN is performed whenever two or more tables are joined in a SQL statement
 to join two table it must have something common in between this two tables;
@@ -415,8 +418,9 @@ to join two table it must have something common in between this two tables;
          
          
 ---
-//////////////MAX/////////////////////////////////////////////////////////////////////////////////////////////
-**LOGICAL QUESTIONS
+_____________________
+
+**LOGICAL QUESTIONS**
 var secondMax = function (){ 
     var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
     var max = Math.max.apply(null, arr); // get the max of the array
