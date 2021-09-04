@@ -23,7 +23,7 @@ CALLSTACK IS KNOW BY THIS NAMES AS WELL
 1.EXECUTION CONTEXT STACK
 2.PROGRAMME STACK
 3.RUNTIME STACK
-4.MACHINE STACK
+4. MACHINE STACK
 ---
 
 **HOISTING IN JS**
@@ -35,7 +35,9 @@ function demo(){
 }
 
 console.log(a);
-console.log(demo);
+console.log(demo)
+
+
 ---
 differnece between Undefined and not define
 
